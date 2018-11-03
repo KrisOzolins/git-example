@@ -1,8 +1,8 @@
 // Fast way to check if list, or in this case array,
 // contains two values which added are equal to the provided sum
-var hasPairWithSum = function (data, sum) {
-    var comp = [];
-    var hasFound = false;
+let hasPairWithSum = function (data, sum) {
+    let comp = [];
+    let hasFound = false;
     data.some((element, index) => {
         if (comp.indexOf(element) != -1) {
             hasFound = true;
@@ -43,7 +43,7 @@ class Animal {
 // ..and it's subclass
 class Dog extends Animal {
     constructor(name, age, tag) {
-        super(name,age, Animal.getTypes().dog)
+        super(name, age, Animal.getTypes().dog)
         this.tag = tag;
     }
 }
@@ -52,3 +52,14 @@ const dog1 = new Animal('Rex', '7', Animal.getTypes().dog);
 console.log(dog1);
 const dog2 = new Dog('Rex', '7', 'Tag name');
 console.log(dog2);
+
+// Higher order array methods
+let values = [12, 17, 99, 2, 8, 3, 87, 77, 92, 10, 27, 65, 33, 11];
+
+const combinedResult = values
+    .map(value => value * 2) // Multiply all values by 2
+    .filter(value => value >= 50) // Get only values which are higher or equal to 50
+    .sort((a, b) => a - b) // Sort asc
+    .reduce((total, value) => total + value, 0); // Get the sum of all the remaining, sorted values
+
+console.log(combinedResult);
