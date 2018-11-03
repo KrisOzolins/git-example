@@ -19,6 +19,7 @@ console.log(hasPairWithSum([1, 2, 3, 4], 8));
 // Should return true
 console.log(hasPairWithSum([1, 4, 4, 2], 8));
 
+// Test example class..
 class Animal {
     constructor(name, age, type) {
         this.name = name;
@@ -39,6 +40,7 @@ class Animal {
     }
 }
 
+// ..and it's subclass
 class Dog extends Animal {
     constructor(name, age, tag) {
         super(name,age, Animal.getTypes().dog)
